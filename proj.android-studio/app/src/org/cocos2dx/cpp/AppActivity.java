@@ -113,7 +113,6 @@ public class AppActivity extends Cocos2dxActivity
         @Override
         public void on(String event, IOAcknowledge ack, Object... args)
         {
-            // final JSONObject message = (JSONObject)args[0];
             Log.d(TAG, "received . " + args[0]);
             AppActivity.nativeReceiveMessage(event, String.valueOf(args[0]));
         }

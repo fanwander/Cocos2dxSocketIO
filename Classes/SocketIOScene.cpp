@@ -34,6 +34,11 @@ bool SocketIOScene::init()
 	
 	Size winSize = Director::getInstance()->getWinSize();
 	
+	// 説明
+	Label *descriptionLabel = Label::createWithSystemFont("四角形を動かすと、接続している全ての端末で動きます", "", 24);
+	descriptionLabel->setPosition(Vec2(winSize.width * 0.5f,winSize.height * 0.9f));
+	this->addChild(descriptionLabel);
+	
 	// 切断
 	ui::Button *disconnectButton = ui::Button::create();
 	disconnectButton->setTitleText("切断");
